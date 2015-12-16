@@ -25,11 +25,11 @@ void setup(){
  myTimer = new Timer(7);
   
 //Helmets for opening scene
-//imga = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832215/a5476c00-a37b-11e5-834a-95f332268999.jpg");
+imga = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832215/a5476c00-a37b-11e5-834a-95f332268999.jpg");
 
 
 //photo of football field
-//img = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832544/fdf7b50a-a37e-11e5-8d17-bf2a2b23383c.png");
+img = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832544/fdf7b50a-a37e-11e5-8d17-bf2a2b23383c.png");
 
 myDefender = new Defender();
 newDefender = new Defender();
@@ -46,10 +46,10 @@ sixDefender = new Defender();
 myRunner = new Runner();
 
 //game over image
-//imgb = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832562/3219808e-a37f-11e5-9af7-354d3c93b503.jpg");
+imgb = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832562/3219808e-a37f-11e5-9af7-354d3c93b503.jpg");
 
 //touchdown image
-//imgc = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832581/631ee03e-a37f-11e5-87ae-120f69a456b4.jpg");
+imgc = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832581/631ee03e-a37f-11e5-87ae-120f69a456b4.jpg");
 }
 
 void draw(){
@@ -128,7 +128,7 @@ if( dState == true){
    background(255);
    image(imgc, 300,0);
    println("TOUCHDOWN!");
-   //add change of state dode here?
+   
  }
  
 
@@ -239,7 +239,7 @@ int centerX, centerY;
    if(dist(centerX, centerY, myRunner.centerX, myRunner.centerY) < 40){
      println("TACKLED!");
       dState = !dState;
-      //write code to chsnge state when he's tackled
+      
      
          
         }
@@ -278,7 +278,7 @@ Defender sixDefender;
 
   </script>
   <canvas id="mycanvas-final"></canvas>
-  <p>Description: On my FINAL SKETCH ASSIGNMENT I made a million</p>
+  <p>Description: On my FINAL SKETCH ASSIGNMENT I created an interactive football game. You click on the screen to start the game. In the game you start on the goal line of the left end zone. You objective is to move the runner using'a' 's' 'd' 'w' to the opposite end zone. If you run into the defenders, however, you will be tackled and lose the game.</p>
         <br />
         <br />
   <h1>My First Processing Sketch</h1>
@@ -321,10 +321,10 @@ point(265,80);
 
   </script>
   <canvas id="mycanvas1"></canvas>
-  <p>Description:</p>
+  <p>Description: In </p>
         <br />
         <br />
-  <h1>Metallica Concert</h1>
+  <h1>Metallica Concert for the ages</h1>
   <script type="text/processing" data-processing-target="mycanvas2">
   
  Note myNote;
@@ -350,16 +350,16 @@ void setup(){
   size(800,600);
   
   //band photo
- // img = loadImage("https://cloud.githubusercontent.com/assets/16195615/11831728/ec11e64c-a376-11e5-821f-36d68477af5c.jpg");
+ img = loadImage("https://cloud.githubusercontent.com/assets/16195615/11831728/ec11e64c-a376-11e5-821f-36d68477af5c.jpg");
   
   //crowd
-//  imga = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
+ imga = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
   
   //crowd 
-//  imgb = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");   
+ imgb = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");   
   
   //crowd
-//  imgc = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
+  imgc = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
   
   myNote = new Note();
   secondNote = new Note();
