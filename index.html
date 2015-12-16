@@ -5,7 +5,7 @@
   <h1>RUSH</h1>
   <script type="text/processing" data-processing-target="mycanvas-final">
   
-boolean mState = false;
+ boolean mState = false;
 boolean tState = false;
 boolean isFinished;
 
@@ -276,510 +276,59 @@ Defender fourDefender;
 Defender fiveDefender;
 Defender sixDefender;
 
+
   </script>
   <canvas id="mycanvas-final"></canvas>
-  <p>Description: On my FINAL SKETCH ASSIGNMENT I created an interactive football game. You click on the screen to start the game. In the game you start on the goal line of the left end zone. You objective is to move the runner using'a' 's' 'd' 'w' to the opposite end zone. If you run into the defenders, however, you will be tackled and lose the game. </p>
+  <p>Description: On my FINAL SKETCH ASSIGNMENT I created an interactive football game. You click on the screen to start the game. In the game you start on the goal line of the left end zone. You objective is to move the runner using 'a' 's' 'd' 'w' to the opposite end zone. If you run into the defenders, however, you will be tackled and lose the game.  </p>
         <br />
         <br />
-  <h1>My First Processing Sketch</h1>
+  <h1>First Processing SKetch</h1>
   <script type="text/processing" data-processing-target="mycanvas1">
   
-  void setup(){
-  
-background(136,255,255);
-
-size(300,300);
-
-rectMode(CENTER);
-rect(150,150,250,150);
-
-//top line
-line(25,85,275,85);
-
-//bottom line
-line(25,215,275,215);
-
-//D-Pad
-rect(80,150,25,90);
-
-rect(80,150,90,25);
-
-ellipseMode(CORNER);
-
-//bottom button
-ellipse(170,150,40,40);
-
-//top button
-ellipse(210,110,40,40);
-
-//top left
-point(35,80);
-
-//top right
-point(265,80);
-}
+  <!-- Your sketch1 goes here -->
 
   </script>
   <canvas id="mycanvas1"></canvas>
-  <p>Description: This was my first time ever using Processing. For this assignment I created a simple video game controller using basic shapes.</p>
+  <p>Description: This was my first time ever using Processing. For this assignment I created a simple video game controller using basic shapes. </p>
         <br />
         <br />
-  <h1>Metallica Concert</h1>
+  <h1>METALLICA</h1>
   <script type="text/processing" data-processing-target="mycanvas2">
   
- Note myNote;
-Note secondNote;
-Note nextNote;
-Note anotherNote;
-Note someNote;
-Note normalNote;
-
-PImage img;
-PImage imga;
-PImage imgb;
-PImage imgc;
-
-int pressed = 0;
-int pressedState = 0;
-
-void setup(){
-  background(255);
-  size(800,600);
-  
-  //band photo
-  img = loadImage("https://cloud.githubusercontent.com/assets/16195615/11831728/ec11e64c-a376-11e5-821f-36d68477af5c.jpg");
-  
-  //crowd
-  imga = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
-  
-  //crowd 
-  imgb = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");   
-  
-  //crowd
-  imgc = loadImage("https://cloud.githubusercontent.com/assets/16195615/11832458/e933a972-a37d-11e5-82b2-284d6345d2ee.jpg");
-  
-  myNote = new Note();
-  secondNote = new Note();
-  nextNote = new Note();
-  anotherNote = new Note();
-  someNote = new Note();
-  normalNote = new Note();
-  
-}
-
-void draw(){  
- 
-    if (pressedState ==1){
-  background(0);
-} else {
-  background(255);
-}
-  //band photo
-  image(img, 160, 20);
-  
-  
-//stage
-stroke(0);
-fill(165,42,42);
-rect(0,400,800,200);
-
-//crowd
-image(imga, 500, 400);
-image(imgb, 200,  400);
-image(imgc, 0, 400);
-
-//scaffolding
-fill(155);
-strokeWeight(2);
-rect(50,0,50,400);
-fill(255);
-triangle(55, 5, 55, 45, 95 ,25);
-triangle(95, 35, 95, 75, 55, 55);
-triangle(55, 65, 55, 105, 95, 85);
-triangle(95, 95, 95, 135, 55, 115);
-triangle(55, 125, 55, 165, 95, 145);
-triangle(95, 155, 95, 195, 55, 175);
-triangle(55, 185, 55, 225, 95, 205);
-triangle(95, 215, 95, 255, 55, 235);
-triangle(55, 245, 55, 285, 95, 265); 
-triangle(95, 275, 95, 315, 55, 295);
-triangle(55, 305, 55, 345, 95, 325);
-triangle(95, 335, 95, 375, 55, 355);
-
-fill(155);
-rect(700,0,50,400);
-fill(255);
-triangle(705, 5, 705, 45, 745, 25);
-triangle(745, 35, 745, 75, 705, 55);
-triangle(705, 65, 705, 105, 745, 85);
-triangle(745, 95, 745, 135, 705, 115);
-triangle(705, 125, 705, 165, 745, 145);
-triangle(745, 155, 745, 195, 705, 175);
-triangle(705, 185, 705, 225, 745, 205);
-triangle(745, 215, 745, 255, 705, 235);
-triangle(705, 245, 705, 285, 745, 265);
-triangle(745, 275, 745, 315, 705, 295);
-triangle(705, 305, 705, 345, 745, 325);
-triangle(745, 335, 745, 375, 705, 355);
-
-fill(237, 201, 175);
-stroke(237,201,175);
-ellipse(mouseX, mouseY, 2,100);
-ellipse(mouseX + 50, mouseY + 100, 2, 100);
-
- // background(255);
-  myNote.move();
-  myNote.display();
-  secondNote.move();
-  secondNote.display();
-  nextNote.move();
-  nextNote.display();
-  anotherNote.move();
-  anotherNote.display();
-  someNote.move();
-  someNote.display();
-
-
-
-}
-
-
-
-
-class Note{
-  int centerX, centerY, offset1, offset2;
-  
-  Note(){
-  centerX = round(random(width));
-  centerY = round(random(width));
-  
-  }
-  
-Note(int _centerX, int _centerY, int _offset1, int _offset2){
-  centerX = _centerX;
-  centerY = _centerY;
- 
-}
-
-void display(){
-  ellipseMode(CENTER);
-  stroke(0);
-  strokeWeight(9);
-  fill(255,215,0);
-  ellipse(centerX, centerY, 50,50);
-  strokeWeight(9);
-  line(centerX + 24, centerY, centerX + 24 , centerY - 75);
-  triangle(centerX + 24, centerY - 75, centerX + 24, centerY - 65, centerX + 50, centerY - 65);
-}
-void move(){
- centerX = round(random(-10,10)) + centerX;
- centerY = round(random(-10,10)) + centerY;
-}
-Note myNote;
-
-}
-
-void mousePressed() {
-  pressed = pressed +1;
-  pressedState = (pressed%2);
-}
-
-void keyPressed(){
-  background(255,215,0);
-}
+  <!-- Your sketch2 goes here -->
 
   </script>
   <canvas id="mycanvas2"></canvas>
- <p>Description: Our theme for this assignment was music so I created a concert. I used an image of METALLICA, as well as, images of a crowd. If you click on the screen it will "turn off the house lights" or change the background from white to black. Also, if you drag your cursor around the screen you can see that there are two drum sticks that follow.</p>
+  <p>Description: Our theme for this assignment was music so I created a concert. I used an image of METALLICA, as well as, images of a crowd. If you click on the screen it will "turn off the house lights" or change the background from white to black. Also, if you drag your cursor around the screen you can see that there are two drum sticks that follow. </p>
         <br />
         <br />
-  <h1>Crazy Tac</h1>
+  <h1>CRAZY TACO</h1>
   <script type="text/processing" data-processing-target="mycanvas3">
-  o
- int tacoX = 100, tacoY = 100, sizeX, sizeY;
-int hotX = 300, hotY = 100;
-int pressedState = 0;
-
-void setup(){
-  size (800,600);
-  background(135,23,15);
-  tacoX = 400;
-  tacoY = 450;
-  sizeX = 100;
-  sizeY = 100;
-}
-
-void draw(){
-  randomizePos();
-  displayTaco();
   
-  for (int x=1; x < 10; x++){
-    noFill();
-    ellipse(width/5, height/2, (x*20), (x*20));
-  }
-  
-  for (int x=1; x < 20; x++){
-    noFill();
-    ellipse(width/1, height/1, (x*20), (x*20));
-  }
-  
-  for (int x=1; x < 15; x++){
-    noFill();
-    ellipse(width/1.5, height/5, (x*20), (x*20));
-
-  }
-   //taco
-  println(tacoX);
-  fill(218,215,144);
-  stroke(218,215,144);
-  
-  //taco shell + fillings
-  //back shell
-  arc(tacoX+25, tacoY,200,175,PI,TWO_PI);
-  //meat
-  fill(139, 69, 19);
-  arc(tacoX+22, tacoY,200,175,PI,TWO_PI);
-  //lettuce
-  fill(10,199,73);
-  arc(tacoX+22, tacoY-20,200,150,PI,TWO_PI);
-  //cheese
-  fill(255,201,52);
-  arc(tacoX+20, tacoY-40,190,120, PI,TWO_PI);
- // stroke(0);
-  
- //front shell
-  fill(218,215,144);
-  arc(tacoX, tacoY,200,175,PI,TWO_PI);
-
-}
-
-void randomizePos(){
-  tacoX = round(random(-5, 5)) + tacoX;
-  tacoY = round(random(-5,5)) + tacoY;
-}
-
-void displayTaco(){
-   arc(tacoX, tacoY, sizeX, sizeY, PI, TWO_PI);
-   tacoX = round (random(-10, 10)) + tacoX;
-   tacoY = round (random(-10, 10)) + tacoY;
-}
-
-void mousePressed(){
-  background(0,255,0);
-}
-void keyPressed(){
-  background(135,23,15);
-}
+  <!-- Your sketch3 goes here -->
 
   </script>
   <canvas id="mycanvas3"></canvas>
-  <p>Description: In this sketch we had to incorporate a "for" loop in with our theme which was food. I have a taco that will move around randomly. If you click on the screen then it will change the background to a lime green color.</p>
+  <p>Description: In this sketch we had to incorporate a "for" loop in with our theme which was food. I have a taco that will move around randomly. If you click on the screen then it will change the background to a lime green color. </p>
         <br />
         <br />
-  <h1>Haunted House</h1>
+  <h1>HAUNTED HOUSE</h1>
   <script type="text/processing" data-processing-target="mycanvas4">
   
- int ghostOneX = 200;
-int ghostOneY = 400;
-int ghostTwoX = 600;
-int ghostTwoY = 200;
-
-int candyX = 100;
-int candyY = 200;
-
-int movementSize = 3;
-float gravity = 0.7;
-
-boolean mState = false;
-
-void setup(){
- size(800,600);
- background(0);
- 
-  stroke(0,123,12);
-  fill(0,123,12);
-  rect(0,350,800,250);
-}
-
-void draw(){
-  if (mState == false){
-  background (0);
-  drawRandomTriangle();
-  } else {
-    
-  }
-
-  println(ghostOneX);
-  //ghost one
-  fill(255);
-  stroke(255);
-  
-  
-  arc(ghostOneX,ghostOneY-50,75,75,PI,TWO_PI);
-  //ghost body
-  rectMode(CENTER);
-  rect(ghostOneX,ghostOneY, 75,100);
-  /*
-  beginShape();
-    vertex(62,75);
-    vertex(62,175);
-    vertex(137,175);
-    vertex(137,75);
-  endShape();
-  */
-  arc(ghostOneX-29,ghostOneY+50,17,50,0,PI);
-  arc(ghostOneX-10,ghostOneY+50,18,50,0,PI);
-  arc(ghostOneX+10,ghostOneY+50,18,50,0,PI);
-  arc(ghostOneX+29,ghostOneY+50,17,50,0,PI);
-  
-  //ghost arms
-  arc(ghostOneX-37.5,ghostOneY-10,50,30,HALF_PI, PI+HALF_PI);
-  arc(ghostOneX+37,ghostOneY-10,50,30, PI+HALF_PI, TWO_PI+HALF_PI);
-  
-  //ghost eyes and mouth
-  fill(0);
-  ellipseMode(CENTER);
-  ellipse(ghostOneX-10,ghostOneY-40,20,20);
-  ellipse(ghostOneX+10,ghostOneY-40,20,20);
-  ellipse(ghostOneX,ghostOneY-10,20,40);
-  
-  //ghost number two
-  fill(255);
-  stroke(255);
-  arc(ghostTwoX, ghostTwoY-50,75,75,PI,TWO_PI);
-  //ghost body
-  /*
-  beginShape();
-    vertex(662,75);
-    vertex(662,175);
-    vertex(737,175);
-    vertex(737,75);
-  endShape();*/
-  rect(ghostTwoX, ghostTwoY,75, 100);
-  arc(ghostTwoX-29, ghostTwoY+50,17,50,0,PI);
-  arc(ghostTwoX-10,ghostTwoY+50,18,50,0,PI);
-  arc(ghostTwoX+10,ghostTwoY+50,18,50,0,PI);
-  arc(ghostTwoX+29,ghostTwoY+50,17,50,0,PI);
-  
-  //ghost arms
-  arc(ghostTwoX-37,ghostTwoY-10,50,30, HALF_PI,PI+HALF_PI);
-  arc(ghostTwoX+37,ghostTwoY-10,50,30,PI+HALF_PI, TWO_PI+HALF_PI);
-  
- //ghost eyes and mouth
- fill(0);
- ellipseMode(CENTER);
- ellipse(ghostTwoX-10,ghostTwoY-40,20,20);
- ellipse(ghostTwoX+10,ghostTwoY-40,20,20);
- ellipse(ghostTwoX,ghostTwoY-10,20,40);
-  
-  
- updateGhost();
- 
-}
-
-void updateGhost(){
-  if(ghostOneX+25 >= width){
-    movementSize = movementSize*-1;
-  } else if (ghostOneX-25 <= 0){
-    movementSize = movementSize * -1;
-  }
-  ghostOneX = ghostOneX + movementSize;
-  fill(255);
-  rect(ghostOneX, ghostOneY, 50, 100);
-  fill(0);
-  ellipseMode(CENTER);
-  ellipse(ghostOneX-10,ghostOneY-40,20,20);
-  ellipse(ghostOneX+10,ghostOneY-40,20,20);
-  ellipse(ghostOneX,ghostOneY-10,20,40);
-  
-  if(ghostTwoX+25 >= width){
-    movementSize = movementSize *-1;
-  }else if (ghostTwoX-25 <= 0){
-    movementSize = movementSize * -1;
-  }
-  ghostTwoX = ghostTwoX + movementSize;
-  fill(0);
-
-}
-
-void mousePressed(){
-  mState = !mState;
-  println("changed!");
-}
-
-void drawRandomTriangle(){
-  float a = random (0, width);
-  float b = random (0, width);
-  float c = random (0, width);
-  float d = random (0, width);
-  float e = random (0, width);
-  float f = random (0, width);
-  triangle(a, b, c, d, e, f);
-}
+  <!-- Your sketch4 goes here -->
 
   </script>
   <canvas id="mycanvas4"></canvas>
-  <p>Description:</p>
+  <p>Description: The theme for this assignment was Halloween. I decided to create my version of a haunted house. There are random appearing triangles that pop up in the back to give that kind of strobe light effect. Also, there are two ghosts that float side to side to be spooky. If you click on the screen the background will pause and the ghosts will elongate.  </p>
         <br />
         <br />
-  <h1>Fallacy</h1>
+  <h1>FALLACY</h1>
   <script type="text/processing" data-processing-target="mycanvas5">
   
- int pressed = 0;
-int pressedState = 0;
-
-void setup(){
-  size (1280,800);
-  textSize(50);
-  text("Louis' Lemons Are the Best!", 50,100);
-  fill(0,102, 153);
- 
-  
-}
-
-void draw (){
-  if (pressedState ==1){
-    background(71,216,67);
-  } else {
-    background(30,30,210);
-  }
-  fill(71,216,67);
-  text("Louis' Lemons Are the Best!", mouseX, mouseY);
-  fill(30,30,210);
-  text("Because Louis Said So!",mouseX+50, mouseY+50);
-  
-    
-  fill(255);
-  ellipseMode(CENTER);
-  ellipse(640,400,500,500);
-
-//lemon
-  fill(242,253,54);
-  strokeWeight(3);
-  stroke(242,253,54);
-  ellipseMode(CENTER);
-  ellipse(640,400,300,200);
-  
-  //nub of lemon
-  arc(500,400,65,75,HALF_PI,PI+HALF_PI);
- 
-  arc(780,400, 65,75,PI+HALF_PI, TWO_PI+HALF_PI);
- 
-  //ends of lemon
-  strokeWeight(15);
-  stroke(0);
-  point(480,400);
-  
-  point(800,400);
-}
-
-void mousePressed() {
-  pressed = pressed +1;
-  pressedState = (pressed%2);
-}
+  <!-- Your sketch5 goes here -->
 
   </script>
   <canvas id="mycanvas5"></canvas>
-  <p>Description:The theme for this sketch was to make a meme of a fallacy. I chose to do the argument for authority fallacy, which is the fallacy that is using the words of someone who claims to be an expert, rather than logic or evidence to support their argument. So, in my sketch I play the role of the expert of lemons and I say mine are the best because I said so. You can interact with this sketch by scrolling over the image and clicking on the image. Scrolling over the image will show the text and clicking on the image will change the background, which in turn changes the text </p>
+  <p>Description: The theme for this sketch was to make a meme of a fallacy. I chose to do the argument for authority fallacy, which is the fallacy that is using the words of someone who claims to be an expert, rather than logic or evidence to support their argument. So, in my sketch I play the role of the expert of lemons and I say mine are the best because I said so. You can interact with this sketch by scrolling over the image and clicking on the image. Scrolling over the image will show the text and clicking on the image will change the background, which in turn changes the text  </p>
   </body>
 </html>  
